@@ -33,3 +33,6 @@ def download(request, id):
     return render(request, "form/form_print.html", {
         "object": object
     })
+
+
+
