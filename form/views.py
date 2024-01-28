@@ -7,11 +7,9 @@ from django.urls import reverse
 
 
 class NewForm(CreateView):
-    # model = Form
-    # fields = '__all__'
     model = Form
     form_class = FormModelForm
-    # success_url = '/success/'
+    
 
 
 class ViewForm(ListView):
