@@ -2,7 +2,7 @@
     "builds": [{
         "src": "contract_form/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "50mb", "runtime": "python3.9" }
+        "config": { "maxLambdaSize": "50mb", "runtime": "python3.10" }
     }],
     "routes": [
         {
