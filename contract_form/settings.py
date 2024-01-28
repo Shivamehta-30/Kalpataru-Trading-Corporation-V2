@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^3wggp*u8mf59!g4n^m6-pj4uf+v=+s!%g40i(@i$ppa5mev=p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'buyer_details',
     'seller_details',
     'quality',
-    'agent'
+    'agent',
+    'transport',
 ]
 
 MIDDLEWARE = [
@@ -92,7 +93,7 @@ DATABASES = {
         'NAME': 'cf',
         'USER': 'postgres',
         'PASSWORD': '3012',
-        'HOST': 'localhost, .vercel.app',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }

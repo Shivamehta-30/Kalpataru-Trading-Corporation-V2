@@ -4,6 +4,7 @@ from buyer_details.models import *
 from seller_details.models import *
 from quality.models import *
 from agent.models import *
+from transport.models import *
 
 
 class Form(models.Model):
@@ -25,7 +26,7 @@ class Form(models.Model):
     quantity = models.CharField(max_length=150, null=True, blank=True)
     delivery_period = models.CharField(max_length=150, null=True, blank=True)
     payment_terms = models.CharField(max_length=150,  null=True, blank=True)
-    transport = models.CharField(max_length=150, null=True, blank=True)
+    transport = models.ForeignKey(Transport, on_delete = models.CASCADE)
     delivery_at = models.CharField(max_length=150, null=True, blank=True)
     remarks = models.CharField(max_length=150, null=True, blank=True)
 

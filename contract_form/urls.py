@@ -23,4 +23,5 @@ urlpatterns = [
     path('seller_details/', include('seller_details.urls')),
     path('buyer_details/', include('buyer_details.urls')),
     path('agent/', include('agent.urls')),
+    path('transport/', include('transport.urls'))
 ]
