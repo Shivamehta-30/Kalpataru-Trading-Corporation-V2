@@ -1,0 +1,135 @@
+{% load crispy_forms_field %}
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="{% static '/image/chart.png' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static '/css/formPrint.css'%}">
+    <link rel="stylesheet" href="{% static '/css/formPrintResponsive.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body class="formMainBody">
+
+    <div class="formMainHeader">
+        <div class="greetTextHead">
+            <p>Shree Nakoda Bhairavay Namah</p>
+        </div>
+        <div class="mainHead">
+            <div class="mhLeft">
+                <img src="{% static '/image/logo.png' %}" alt="" width="72" height="72">
+            </div>
+            <div class="mhRight">
+                <h2>Order Form </h2>
+                <h3>Kalpataru Trading Corporation</h3>
+                <span>ktcahmedabad@yahoo.com | +91 94265 01564</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="formSellerInfo">
+        <div class="SIFirstCol">
+            <div class="SIBname">
+                <h3><strong>Buyer Name</strong></h3>
+                <span>{{object.buyername}}</span>
+            </div>
+            <div class="SIAname">
+                <h3><strong>Agent Name</strong></h3>
+                <span>{{object.agentname}}</span>
+            </div>
+        </div>
+        <div class="SISecondCol">
+            <div class="SISname">
+                <h3><strong>Seller Name</strong></h3>
+                <div class="SIScn">
+                    <p>Name: </p>
+                    <p>{{object.sellername}}</p>
+                </div>
+                <div class="SIScd">
+                    <p>Date: </p>
+                    <p>{{object.date}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="paymentInfoTable">
+        <thead>
+            <tr>
+                <th>Qlty</th>
+                <th>Width</th>
+                <th>Pcs</th>
+                <th>Qty</th>
+                <th>Rate</th>
+                <th>Reed</th>
+                <th>Pik</th>
+                <th>Payment Terms</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{object.Quality}}</td>
+                <td>{{object.width}}</td>
+                <td>{{object.pcs}}</td>
+                <td>{{object.quantity}}</td>
+                <td>{{object.rate}}</td>
+                <td>{{object.reed}}</td>
+                <td>{{object.pik}}</td>
+                <td>{{object.payment_terms}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <div class="paymentBillContainer">
+        <div class="paymentBill">
+            <div class="pbInfo">
+                <p>Transport</p>
+                <p>{{object.transport}}</p>
+            </div>
+            <div class="pbInfo">
+                <p>Discount</p>
+                <p>{{object.discount}}</p>
+            </div>
+            <div class="pbInfo">
+                <p>Delivery Period(in days)</p>
+                <p>{{object.delivery_period}}</p>
+            </div>
+            <div class="pbInfo">
+                <p>Delivery at</p>
+                <p>{{object.delivery_at}}</p>
+            </div>
+            <div class="pbInfo">
+                <p>Remarks (if any)</p>
+                <p>{{object.remarks}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <h4>ADDRESS</h4>
+        <p>Kalpataru Trading Corporation</p>
+        <p>20, Shri Mahavir Cloth Market, <br>
+            B/H New Cloth Market,<br>
+            Kankaria Road, Ahmedabad.</p>
+        <p><strong>Contact Number: +91 94265 01564</strong></p>
+    </footer>
+</body>
+<script>
+    window.addEventListener("load", window.print());
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+{% load crispy_forms_field %}
+{% load static %}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="{% static '/image/chart.png' %}">
+    <title>Kalpataru Trading Corporation</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'Form-new'%}">Kalpataru Trading Corporation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Form-new'%}">New Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Buyer-new'%}">Add Buyer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Seller-new'%}">Add Seller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Quality-new'%}">Add Quality</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Agent-new'%}">Add Agent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Form-view'%}">View Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <img src="">
+            <img class="d-block mx-auto mb-4" src="{% static '/image/logo.png' %}" alt="" width="72" height="72">
+            <h2>Contract Form</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 order-md-2 mx-auto">
+                <form class="needs-validation" method="post" id="form">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="name">Buyer Name </label>
+                        {% crispy_field form.buyer_name class="form-control" %}
+                    </div>
+
+                    <hr class="mb-4">
+                    <button id="downloadBtn" class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2023-2024 <a href="https://www.linkedin.com/in/shivam-mehta-5584a8206/">Shivam
+                    Mehta</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+<script>
+
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>

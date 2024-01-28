@@ -1,0 +1,5 @@
+asgiref==3.6.0
+crispy-bootstrap4==2022.1
+Django==4.1.7
+django-colorfield==0.8.0
+django-crispy-forms==2.0
