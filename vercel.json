@@ -7,8 +7,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "contract_form/wsgi.py",
-            "method": ["GET", "POST"]
+            "dest": "contract_form/wsgi.py"
         }
     ]
 }
