@@ -1,0 +1,103 @@
+@media (max-width: 640px) {
+    .mhLeft img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mainHead {
+        align-items: unset;
+    }
+
+    .greetTextHead p {
+        font-size: 10px;
+        ;
+    }
+
+    .mhRight {
+        margin-right: 7px;
+    }
+
+    .mhLeft {
+        margin-left: 10px;
+    }
+
+    .mhRight h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .mhRight h3 {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .mhRight span {
+        font-size: 15px;
+    }
+
+    .formMainHeader {
+        width: auto;
+        padding: 0 10px;
+    }
+
+    /* SELLER INFOOOOOOOOOOOO */
+
+    .formSellerInfo {
+        margin-top: 20px;
+    }
+
+    .formSellerInfo h3 {
+        font-size: 15px;
+    }
+
+    .formSellerInfo span, p {
+        font-size: 13px;
+    }
+
+    .SIFirstCol {
+        gap: 10px;
+    }
+
+    /* PAYMENT TABLEEEEEEE */
+
+    .paymentInfoTable {
+        margin-top: 5px;
+    }
+
+    .paymentInfoTable thead {
+        font-size: 12px;
+    }
+
+    .paymentInfoTable thead tr th {
+        white-space: normal;
+        height: 40px;
+    }
+
+    .paymentInfoTable tbody tr td {
+        font-size: 11px;
+        height: 40px;
+    }
+
+    /* PAYMENT BILLLL */
+
+    .paymentBill {
+        width: auto;
+        margin-top: 20px;
+    }
+
+    .paymentBill p {
+        font-size: 15px;
+    }
+
+    .pbInfo {
+        margin: -10px 0;
+    }
+
+    .footer{
+        padding: 15px;
+    }
+    .footer h4{
+        font-size: 17px;
+    }
+}
