@@ -14,6 +14,8 @@ from pathlib import Path
 import dj_database_url
 import environ
 import os
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
 
 env = environ.Env()
 environ.Env.read_env()
@@ -60,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware", 
 ]
 
 ROOT_URLCONF = 'contract_form.urls'
